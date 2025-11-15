@@ -79,7 +79,14 @@ aside{
 }
 
 #bosque, #flores, #laptop, #montaña, #gotas, #libro, #playa{
-    width: 420px;
-    height: 420px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
+    flex-grow: 1;
+} 
+
+.imagen{
+    display: flex;
+    overflow: hidden;
 }
+
