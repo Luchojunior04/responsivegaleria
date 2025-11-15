@@ -1,0 +1,85 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    background-color: orange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+
+}
+
+nav{
+    display: flex;
+    gap: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 8px;
+    border-radius: 10px;
+    transition: all 0.9s ease;
+}
+
+a:hover{
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: orange;
+    padding-top: 30px;
+}
+
+a#here {
+  padding-top: 30px;
+  color: red;
+  border-bottom: 1px solid
+  
+}
+
+img#fotografia{
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+}
+
+main{
+    margin: 1rem;
+    max-width: 850px;
+    margin: auto;
+}
+
+aside{
+    width: 500px;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+#bosque, #flores, #laptop, #montaña, #gotas, #libro, #playa{
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+}
