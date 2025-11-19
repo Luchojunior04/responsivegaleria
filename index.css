@@ -5,8 +5,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root{
+    scroll-behavior: smooth;
+}
+
 body{
     height: 100vh;
+    
 }
 
 header{
@@ -15,6 +20,11 @@ header{
     justify-content: space-evenly;
     align-items: center;
     height: 70px;
+    position: sticky;
+    z-index: 3;
+    opacity: 0.5;
+    top: 0;
+   
 
 }
 
@@ -62,8 +72,8 @@ a#here {
 
 img#fotografia{
     border-radius: 50%;
-    height: 400px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 main{
@@ -73,24 +83,119 @@ main{
 }
 
 aside{
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     aspect-ratio: 1;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin: auto;
     gap: 10px;
 }
 
-#bosque, #flores, #laptop, #montaña, #gotas, #libro, #playa{
+.imagen img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    transition: filter .5s, transform .5s;
 } 
 
 .imagen{
-    display: flex;
+    height: 300px;
+    border-radius: 8px;
     overflow: hidden;
+    aspect-ratio: 1;
+    position: relative;
+    width: 100%;
 }
+
+.imagen::before{
+     content: attr(data-content);
+     color: white;
+     font-size: 2rem;
+     width: 100%;
+     position: absolute;
+     text-align: center;
+     bottom: 32px;
+     opacity: 0;
+     transition: opacity .5s;
+     z-index: 1;
+}
+
+.imagen:hover::before{
+    opacity: 1;
+}
+
+.imagen:hover img{
+    transform: scale(1.2);
+    filter: blur(20px);
+}
+
+footer{
+    display: flex;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 8px;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    border: orange 2px solid;
+}
+
+h3{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    display: flex;
+    height: 25px;
+    border: orange 2px solid;
+    border-radius: 15px;
+   
+}
+
+button{
+    margin-top: 10px;
+    border: orange 2px solid;
+    color: orange;
+    transition: all 0.9s ease;
+    border-radius: 15px;
+    height: 25px;
+}
+
+button:hover{
+    background-color: rgba(255, 166, 0, 0.452);
+}
+
+#mensaje{
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 340px){
+    nav{
+       display: none;    
+    };
+
+}
+
+
+
+
+
+
 
